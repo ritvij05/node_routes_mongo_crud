@@ -31,7 +31,7 @@ mongoose.connect(db,
 
 // Use Routes
 app.use('/', Job_description);
-
+app.get('/', Job_description);
 
 // Server
 const port       = process.env.port || 3000;
