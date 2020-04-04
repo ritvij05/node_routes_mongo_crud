@@ -7,8 +7,9 @@ const employee_data = require('../../models/employee');
 
 // @routes Get All Employee Data
 router.get('/',(req,res)=>{
-    employee_data.find()
-        .then(data=> res.json(data))
+    // employee_data.find()
+    //     .then(data=> res.json(data))
+    res.render("pages/index");
 });
 
 
@@ -34,14 +35,26 @@ router.delete('/:id',(req,res)=>{
     });
 
 // @routes Update employee data
-router.post('/:id',(req,res)=>{
-        const newData = ({
-            name   : req.body.name
+// router.put('/:id',(req,res)=>{
+//         const newData = ({
+//             name   : req.body.name,
+//             age    : req.body.age
+//         });
+//         employee_data.findById(req.params.id)
+//         .then(data=> data.updateOne(newData).then(()=>res.send("successful")))
+//         .catch((error)=>res.send(error)); 
+//     });
+
+// // @routes Update employee data
+router.put('/:id',(req,res)=>{
+            const newData = ({
+            name   : req.body.name,
+            age    : req.body.age
         });
-        employee_data.findById(req.params.id)
-        .then(data=> data.updateOne(newData).then(()=>res.send("successful")))
-        .catch((error)=>res.send(error)); 
-    });
+    employee_data.updateOne({_id: req.params.id},{$set:{...employee_data,name:newData.name,age:newData.age}})
+    .then(()=>res.json({success:true}))
+    .catch((error)=>res.jason(error)); 
+});
 
 
 module.exports = router;

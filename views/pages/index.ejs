@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <%- include ('../partials/links') -%>
+    </head>
+
+    <body>
+        <%- include ('../partials/header') -%>
+        <div id="home">
+        <form name="form1" id="form1"  method="POST">
+        <div class="container" style="margin-top: 5%;" id="section-1">
+                <div class="form-group col-md-8 col-lg-8">
+                  <label for="job_id">Job Id:</label>
+                  <input type="text" class="form-control" id="job_id" placeholder="job_id" required="">
+                </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                  <label for="job_title">Job Title:</label>
+                  <input type="text" class="form-control" id="job_title" placeholder="job_title" required="">
+                </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                    <label for="department">Department:</label>
+                    <select class="form-control" id="department" required>
+                        <option>Depart-1</option>
+                        <option>Depart-2</option>
+                        <option>Depart-3</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                    <label for="location">Location:</label>
+                    <input type="text" class="form-control" id="location" placeholder="location" required="">
+                </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                    <label for="job_shift">Job Shift:</label>
+                    <select class="form-control" id="job_shift" required>
+                        <option>shift-1</option>
+                        <option>shift-2</option>
+                        <option>shift-3</option>
+                    </select>
+                </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                    <label for="no_opening">No. OF Opening:</label>
+                    <input type="number" class="form-control" id="no_opening" placeholder="no_opening" required="">
+                </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                    <label for="exp_lvl">Experience Level:</label>
+                    <input type="text" class="form-control" id="exp_lvl" placeholder="Exp_lvl" required="">
+                </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                    <label for="must_skills">Must Have Skills:</label>
+                    <input type="text" class="form-control" id="must_skills" placeholder="e.g. Leadership" required="">
+                </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                    <label for="good_skills">Good To Have Skills:</label>
+                    <input type="text" class="form-control" id="good_skills" placeholder="e.g. Communication" required="">
+                </div>
+
+                <div class="form-row">
+                <div class="form-group col">
+                    <label for="min_salary">Min Salary:</label>
+                    <input type="number" class="form-control" id="min_salary" placeholder="min_salary" required="">
+                </div>
+                <div class="form-group col">
+                    <label for="max_salary">Max Salary:</label>
+                    <input type="number" class="form-control" id="max_salary" placeholder="max_salary" required="">
+                </div>
+                </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                    <label for="job_desc">Job Description:</label>
+                    <input type="text" class="form-control" id="job_desc" placeholder="job_desc" required="">
+                </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                    <label for="skills_desc">Skills Description:</label>
+                    <input type="text" class="form-control" id="skills_desc" placeholder="skills_desc" required="">
+                </div>
+
+                  <button type="button" id="next" class="btn btn-success btn-lg " style="margin-left: 2%;">Next</button>
+                  
+                </div>
+
+                <div id="section-2" class="container" style="margin-top: 5%;">
+
+                    <div class="form-group col-md-8 col-lg-8">
+                        <label for="creator">Creator:</label>
+                        <input type="text" class="form-control" id="creator" placeholder="creator" required="">
+                    </div>
+
+                    <div class="form-group col-md-8 col-lg-8">
+                        <label for="collaborator">Collaborator:</label>
+                        <input type="text" class="form-control" id="collaborator" placeholder="collaborator" required="">
+                    </div>
+
+                    <div class="form-group col-md-8 col-lg-8">
+                        <label for="interviewer">Interviewer:</label>
+                        <input type="text" class="form-control" id="interviewer" placeholder="interviewer" required="">
+                    </div>
+
+                    <div class="form-group col-md-8 col-lg-8">
+                        <label for="hire_manager">Hiring Manager:</label>
+                        <input type="text" class="form-control" id="hire_manager" placeholder="hire_manager" required="">
+                    </div>
+                    <button type="button" id="back" class="btn btn-success btn-lg " style="margin-left: 2%;">Back</button>
+                    <button type="submit" id="submit" class="btn btn-success btn-lg " style="margin-left: 2%;">Submit</button>
+                </div>
+               </form>
+        </div>
+        <div id="update">
+            <form name="form2" id="form2"  method="POST">
+                <div class="container" style="margin-top: 5%;">
+                        <div class="form-group col-md-8 col-lg-8">
+                          <label for="individual_name">Individual Name:</label>
+                          <input type="text" class="form-control" id="individual_name" placeholder="Name" required="">
+                        </div>
+
+             
+                    <div class="form-group col-md-8 col-lg-8">
+                      <label for="job_id_up">job_id:</label>
+                      <input type="text" class="form-control" id="job_id_up" placeholder="job_id" required="">
+                    </div>
+         
+            <div class="form-group col-md-8 col-lg-8">
+                <label for="field_name">Update Field Name:</label>
+                <select class="form-control" id="field_name" required>
+                    <option value="job_id">Job Id</option>
+                    <option value="Job Title">Job Title</option>
+                    <option value="department">Department</option>
+                    <option value="location">Location</option>
+                    <option value="job_shift">Job Shift</option>
+                </select>
+            </div>
+            
+                <div class="form-group col-md-8 col-lg-8">
+                  <label for="new_val">Enter New Value:</label>
+                  <input type="text" class="form-control" id="new_val" placeholder="New Value" required="">
+                </div>
+                <button type="submit" id="submit2" class="btn btn-success btn-lg " style="margin-left: 2%;">Submit</button>
+            </div>
+
+            </form>
+        </div>
+        <div id="delete">
+            <form name="form3" id="form3"  method="POST">
+                <div class="container" style="margin-top: 5%;">
+                        <div class="form-group col-md-8 col-lg-8">
+                          <label for="job_id_del">Job Id:</label>
+                          <input type="text" class="form-control" id="job_id_del" placeholder="job_id" required="">
+                        </div>
+                        
+                        <div class="form-group col-md-8 col-lg-8">
+                            <label for="name">Individual Name:</label>
+                            <input type="text" class="form-control" id="name" placeholder="name" required="">
+                          </div>
+                          <button type="submit" id="submit3" class="btn btn-success btn-lg " style="margin-left: 2%;">Submit</button>
+                </div>
+            </form>
+    </div>
+    </body>
+
+</html>
+
+<script>
+ $(document).ready(function(){
+    $("#section-2").hide();
+    $('#update').hide();
+    $('#delete').hide();
+    $("#next").click(function(){
+            $("#section-2").show();
+            $("#section-1").hide();
+
+        });
+    $("#back").click(function(){
+        $("#section-2").hide();
+        $("#section-1").show();
+
+    });
+    $("#Update").click(function(){
+        $("#home").hide();
+        $("#update").show();
+        $("#delete").hide();
+    });
+    $("#Delete").click(function(){
+        $("#home").hide();
+        $("#update").hide();
+        $("#delete").show();
+    });
+    $("#Home").click(function(){
+        $("#home").show();
+        $("#update").hide();
+        $("#delete").hide();
+    });
+    $('#submit').click(function(e){
+			// alert(result);
+            e.preventDefault();
+        let job_id      = $('#job_id').val();
+        let job_title   = $('#job_title').val();
+        let department  = $('#department').val();
+        let location    = $('#location').val();
+        let job_shift   = $('#job_shift').val();
+        let no_opening  = $('#no_opening').val();
+        let exp_lvl     = $('#exp_lvl').val();
+        let must_skills = $('#must_skills').val();
+        let good_skills = $('#good_skills').val();
+        let min_salary  = $('#min_salary').val();
+        let max_salary  = $('#max_salary').val();
+        let job_desc    = $('#job_desc').val();
+        let skills_desc = $('#skills_desc').val();
+        let creator     = $('#creator').val();
+        let collaborator= $('#collaborator').val();
+        let interviewer = $('#interviewer').val();
+        let hire_manager= $('#hire_manager').val();
+        let url         = '/add_val';
+        // alert(job_id);
+        $.post(url,{job_id:job_id,job_title:job_title,department:department,location:location,
+            job_shift:job_shift,no_opening:no_opening,exp_lvl:exp_lvl,
+            must_skills:must_skills,good_skills:good_skills,min_salary:min_salary,max_salary:max_salary,
+            job_desc:job_desc,skills_desc:skills_desc,creator:creator,collaborator:collaborator,
+            interviewer:interviewer,
+            hire_manager:hire_manager}).done(function(data){
+					    if(data == "Successful"){
+
+                swal({
+                                title: "Successfully",
+                                text: "",
+                                icon: "success",
+                                }).then(function(){
+                                    window.location = '/';
+                                });
+
+                document.getElementById("form1").reset();
+              }
+              else{
+                swal({
+                                title: "Failed",
+                                text: "",
+                                icon: "error",
+                                }).then(function(){
+                                    window.location = '/';
+                                });
+                  
+              }
+            });
+
+
+        });
+        $('#submit2').click(function(e){
+			// alert(result);
+            e.preventDefault();
+            let job_id_up= $('#job_id_up').val();
+            let field_name = $('#field_name').val();
+            let new_val  = $('#new_val').val();
+            let url       = '/up_val';
+           
+            $.post(url,{job_id_up:job_id_up,field_name:field_name,new_val:new_val}).done(function(data){
+					    if(data == "Successful"){
+
+                swal({
+                                title: "Successfull",
+                                text: "",
+                                icon: "success",
+                                }).then(function(){
+                                    window.location = '/';
+                                });
+
+                document.getElementById("form2").reset();
+              }
+              else{
+                swal({
+                                title: "Failed",
+                                text: data,
+                                icon: "error",
+                                }).then(function(){
+                                    window.location = '/';
+                                });
+                  
+              }
+        });
+    });
+
+
+
+
+        $('#submit3').click(function(e){
+			// alert(result);
+            e.preventDefault();
+            let job_id_del= $('#job_id_del').val();
+            let url       = '/del_val';
+            $.post(url,{job_id_del:job_id_del}).done(function(data){
+					    if(data == "Successful"){
+
+                swal({
+                                title: "Successfull",
+                                text: "",
+                                icon: "success",
+                                }).then(function(){
+                                    window.location = '/';
+                                });
+
+                document.getElementById("form3").reset();
+              }
+              else{
+                swal({
+                                title: "Failed",
+                                text: "",
+                                icon: "error",
+                                }).then(function(){
+                                    window.location = '/';
+                                });
+                  
+              }
+        });
+    });
+
+ });
+
+</script>
