@@ -30,7 +30,7 @@ mongoose.connect(db,
 .catch((error)=>console.log(error));
 
 // Use Routes
-app.use('/', Job_description);
+// app.use('/', Job_description);
 app.get('/', Job_description);
 
 // Server
