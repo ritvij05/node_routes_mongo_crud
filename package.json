@@ -8,6 +8,10 @@
     "start": "node server.js",
     "server": "nodemon server.js"
   },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
   "author": "ritvij",
   "license": "ISC",
   "dependencies": {

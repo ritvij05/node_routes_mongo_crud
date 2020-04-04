@@ -33,5 +33,5 @@ mongoose.connect(db,
 app.use('/', Job_description);
 
 // Server
-const port       = process.env.port || 5000;
+const port       = process.env.port || 3000;
 app.listen(port, () => console.log(`Server Started At Port ==> ${port}`));
