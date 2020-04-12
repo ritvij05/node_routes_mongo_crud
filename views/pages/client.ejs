@@ -16,28 +16,30 @@
                 </div>
 
                 <div class="form-group col-md-8 col-lg-8">
-                  <label for="username">Username:</label>
-                  <input type="text" class="form-control" id="username" placeholder="username" required="">
+                  <label for="company_name">Company Name:</label>
+                  <input type="text" class="form-control" id="company_name" placeholder="company_name" required="">
                 </div>
 
                 <div class="form-group col-md-8 col-lg-8">
-                    <label for="email">Email:</label>
-                    <input type="text" class="form-control" id="email" placeholder="email" required="">
+                    <label for="company_type">Company Type:</label>
+                    <input type="text" class="form-control" id="company_type" placeholder="company_type" required="">
                 </div>
 
                 <div class="form-group col-md-8 col-lg-8">
-                    <label for="password">Password:</label>
-                    <input type="text" class="form-control" id="password" placeholder="password" required="">
+                    <label for="employee_count">Employee Count:</label>
+                    <input type="text" class="form-control" id="employee_count" placeholder="employee_count" required="">
                 </div>
 
                 <div class="form-group col-md-8 col-lg-8">
-                    <label for="user_type">User Type:</label>
-                    <select class="form-control" id="user_type" required>
-                        <option>--SELECT--</option>
-                        <option value="Client">Client</option>
-                        <option value="Recruiter">Recruiter</option>
-                    </select>
+                    <label for="company_location">Company Location:</label>
+                    <input type="text" class="form-control" id="company_location" placeholder="company_location" required="">
                 </div>
+
+                <div class="form-group col-md-8 col-lg-8">
+                    <label for="designation">Designation:</label>
+                    <input type="text" class="form-control" id="designation" placeholder="designation" required="">
+                </div>
+
                           <button type="submit" id="submit3" class="btn btn-success btn-lg " style="margin-left: 2%;">Submit</button>
                 </div>
             </form>
@@ -52,21 +54,15 @@
 			// alert(result);
             e.preventDefault();
         let name      = $('#name').val();
-        let username   = $('#username').val();
-        let password  = $('#password').val();
-        let email    = $('#email').val();
-        let user_type  = $('#user_type').val();
-        let url
+        let company_name   = $('#company_name').val();
+        let company_type = $('#company_type').val();
+        let employee_count    = $('#employee_count').val();
+        let company_location  = $('#company_location').val();
+        let designation = $('#designation').val();
+        let url = '/clientUpdate'
         // alert(user_type)
-        if(user_type=="Client"){
-            
-        url= '/clientReg';
-        }
-        else{
-        url= '/recruiterReg';   
-        }
         // alert(url);
-        $.post(url,{name:name,username:username,password:password,email:email,user_type:user_type}).done(function(data){
+        $.post(url,{name:name,company_name:company_name,company_type:company_type,employee_count:employee_count,company_location:company_location,designation:designation}).done(function(data){
 					    if(data !== "error"){
 
                 swal({
